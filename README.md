@@ -1,3 +1,7 @@
+# This is a copy of purcell's emacs configuration
+
+Used to save some personal settings.
+
 # A reasonable Emacs config
 
 This is my emacs configuration tree, continually used and tweaked
