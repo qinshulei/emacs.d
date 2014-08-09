@@ -52,4 +52,9 @@
 (require-package 'projectile)
 
 
+;;; install js2-refactor
+(require-package 'js2-refactor)
+(require 'js2-refactor)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
 (provide 'init-local)
