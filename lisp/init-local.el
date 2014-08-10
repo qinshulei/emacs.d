@@ -33,6 +33,10 @@
     (occur regexp nlines)
     (delete-windows-on "*Help*")))
 
+;;;install yasnippt
+(require-package 'yasnippet)
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;;; install js2-refactor
 (require-package 'js2-refactor)
