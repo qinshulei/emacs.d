@@ -57,4 +57,9 @@
 (require 'js2-refactor)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
+;;; install neotree
+(require-package 'neotree)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 (provide 'init-local)
