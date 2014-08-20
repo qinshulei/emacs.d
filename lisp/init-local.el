@@ -51,4 +51,11 @@
 ;;; install projectile
 (require-package 'projectile)
 
+;;; install google translate
+(require-package 'google-translate)
+(require 'google-translate-default-ui)
+(require 'google-translate-smooth-ui)
+(global-set-key "\C-ct" 'google-translate-smooth-translate)
+(setq google-translate-translation-directions-alist '(("en" . "zh-CN")))
+
 (provide 'init-local)
