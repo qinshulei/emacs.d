@@ -15,8 +15,7 @@
   "Insert current date yyyy-mm-dd."
   (interactive)
   (when (region-active-p)
-        (delete-region (region-beginning) (region-end) )
-        )
+        (delete-region (region-beginning) (region-end) ))
   (insert (format-time-string "%Y-%m-%d %H:%M:%S"))
   )
 
@@ -115,6 +114,13 @@
 (require-package 'ob-mongo)
 (require 'ob-mongo)
 
+
+
+;;; remove makefile tab
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (whitespace-cleanup-mode 0)
+            (setq tab-width 8)))
 
 
 (provide 'init-local)
