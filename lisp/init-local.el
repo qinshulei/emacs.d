@@ -58,4 +58,9 @@
 (global-set-key "\C-ct" 'google-translate-smooth-translate)
 (setq google-translate-translation-directions-alist '(("en" . "zh-CN")))
 
+;;; remove makefile tab
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (whitespace-cleanup-mode 0)
+            (setq tab-width 8)))
 (provide 'init-local)
