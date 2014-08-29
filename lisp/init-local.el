@@ -114,6 +114,11 @@
 (require-package 'ob-mongo)
 (require 'ob-mongo)
 
+;; install xcscope
+(require-package 'xcscope)
+(setq cscope-program "gtags-cscope")
+(require 'xcscope)
+
 
 
 ;;; remove makefile tab
