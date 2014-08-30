@@ -115,5 +115,6 @@
 ;; install gist
 (require-package 'gist)
 (require 'gist)
+(setq gist-view-gist t)
 
 (provide 'init-local)
