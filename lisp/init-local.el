@@ -112,5 +112,8 @@
 (setq cscope-program "gtags-cscope")
 (require 'xcscope)
 
+;; install gist
+(require-package 'gist)
+(require 'gist)
 
 (provide 'init-local)
