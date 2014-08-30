@@ -119,6 +119,9 @@
 (setq cscope-program "gtags-cscope")
 (require 'xcscope)
 
+;; install gist
+(require-package 'gist)
+(require 'gist)
 
 
 ;;; remove makefile tab
