@@ -122,6 +122,7 @@
 ;; install gist
 (require-package 'gist)
 (require 'gist)
+(setq gist-view-gist t)
 
 
 ;;; remove makefile tab
