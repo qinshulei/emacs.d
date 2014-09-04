@@ -50,6 +50,7 @@
 
 ;;; install projectile
 (require-package 'projectile)
+(projectile-global-mode)
 
 ;;; install google translate
 (require-package 'google-translate)
@@ -115,5 +116,13 @@
 ;; install gist
 (require-package 'gist)
 (require 'gist)
+
+
+;; install nyan-mode
+(require-package 'nyan-mode)
+
+;; install nyan-prompt
+(require-package 'nyan-prompt)
+(add-hook 'eshell-load-hook 'nyan-prompt-enable)
 
 (provide 'init-local)
