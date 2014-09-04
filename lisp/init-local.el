@@ -124,5 +124,6 @@
 ;; install nyan-prompt
 (require-package 'nyan-prompt)
 (add-hook 'eshell-load-hook 'nyan-prompt-enable)
+(require 'nyan-mode)
 
 (provide 'init-local)
