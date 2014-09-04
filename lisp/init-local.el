@@ -49,6 +49,7 @@
 
 ;;; install projectile
 (require-package 'projectile)
+(projectile-global-mode)
 
 
 ;;; install js2-refactor
@@ -131,5 +132,13 @@
             (whitespace-cleanup-mode 0)
             (setq tab-width 8)))
 
+
+
+;; install nyan-mode
+(require-package 'nyan-mode)
+
+;; install nyan-prompt
+(require-package 'nyan-prompt)
+(add-hook 'eshell-load-hook 'nyan-prompt-enable)
 
 (provide 'init-local)
