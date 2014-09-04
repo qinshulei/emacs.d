@@ -32,3 +32,6 @@ site-lisp/package/
 /emms/
 /.smex-items
 /image-dired/
+projectile-bookmarks.eld
+session*
+projectile.cache
