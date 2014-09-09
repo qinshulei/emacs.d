@@ -50,6 +50,8 @@
 ;;; install projectile
 (require-package 'projectile)
 (projectile-global-mode)
+(setq projectile-indexing-method 'native)
+
 
 
 ;;; install js2-refactor
@@ -141,5 +143,14 @@
 (require-package 'nyan-prompt)
 (add-hook 'eshell-load-hook 'nyan-prompt-enable)
 (require 'nyan-mode)
+
+;; install ack-and-a-half
+(require-package 'ack-and-a-half)
+(require 'ack-and-a-half)
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+
 
 (provide 'init-local)
