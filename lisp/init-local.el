@@ -152,5 +152,10 @@
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
+;; install angular snipptes
+(require-package 'angular-snippets)
+(require 'angular-snippets)
+(eval-after-load "sgml-mode"
+  '(define-key html-mode-map (kbd "C-c C-d") 'ng-snip-show-docs-at-point))
 
 (provide 'init-local)
