@@ -143,4 +143,16 @@
 (eval-after-load "sgml-mode"
   '(define-key html-mode-map (kbd "C-c C-d") 'ng-snip-show-docs-at-point))
 
+;; install bm.el
+(require-package 'bm)
+(require 'bm)
+(global-set-key (kbd "<C-f2>") 'bm-toggle)
+(global-set-key (kbd "<f2>")   'bm-next)
+(global-set-key (kbd "<S-f2>") 'bm-previous)
+
+;; install golden-ratio
+(require-package 'golden-ratio)
+(require 'golden-ratio)
+(golden-ratio-mode 1)
+
 (provide 'init-local)
