@@ -15,8 +15,12 @@
   "Insert current date yyyy-mm-dd."
   (interactive)
   (when (region-active-p)
+<<<<<<< HEAD
         (delete-region (region-beginning) (region-end) )
         )
+=======
+        (delete-region (region-beginning) (region-end) ))
+>>>>>>> 8d915519110aa102cf3c8580b6815ae8d88ddc11
   (insert (format-time-string "%Y-%m-%d %H:%M:%S"))
   )
 
@@ -54,6 +58,23 @@
 (setq projectile-indexing-method 'native)
 
 
+<<<<<<< HEAD
+=======
+
+;;; install js2-refactor
+(require-package 'js2-refactor)
+(require 'js2-refactor)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+;;; install neotree
+(require-package 'neotree)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;;; install projectile
+(require-package 'projectile)
+
+>>>>>>> 8d915519110aa102cf3c8580b6815ae8d88ddc11
 ;;; install google translate
 (require-package 'google-translate)
 (require 'google-translate-default-ui)
@@ -61,12 +82,15 @@
 (global-set-key "\C-ct" 'google-translate-smooth-translate)
 (setq google-translate-translation-directions-alist '(("en" . "zh-CN")))
 
+<<<<<<< HEAD
 ;;; remove makefile tab
 (add-hook 'makefile-mode-hook
           (lambda ()
             (whitespace-cleanup-mode 0)
             (setq tab-width 8)))
 
+=======
+>>>>>>> 8d915519110aa102cf3c8580b6815ae8d88ddc11
 ;;; install inf-mongodb
 (require-package 'inf-mongo)
 (require 'inf-mongo)
@@ -121,6 +145,17 @@
 (setq gist-view-gist t)
 
 
+<<<<<<< HEAD
+=======
+;;; remove makefile tab
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (whitespace-cleanup-mode 0)
+            (setq tab-width 8)))
+
+
+
+>>>>>>> 8d915519110aa102cf3c8580b6815ae8d88ddc11
 ;; install nyan-mode
 (require-package 'nyan-mode)
 
