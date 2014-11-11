@@ -48,7 +48,7 @@
 ;;; install projectile
 (require-package 'projectile)
 (projectile-global-mode)
-(setq projectile-indexing-method 'native)
+(setq projectile-indexing-method 'alien)
 
 ;;; install js2-refactor
 (require-package 'js2-refactor)
