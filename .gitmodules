@@ -1,0 +1,6 @@
+[submodule "site-lisp/cheat"]
+	path = site-lisp/cheat
+	url = https://github.com/qinshulei/cheat.el.git
+[submodule "site-lisp/eim"]
+	path = site-lisp/eim
+	url = https://github.com/RenWenshan/emacs-eim.git
