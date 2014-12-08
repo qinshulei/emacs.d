@@ -141,4 +141,12 @@
 (setq backup-directory-alist (quote (("." . "~/.saves"))))
 (setq backup-by-copying t)
 
+;; install e2wm e2wm
+;;(require-package 'e2wm)
+;;(require 'e2wm)
+;;(global-set-key (kbd "M-+") 'e2wm:start-management)
+
+;; install cheat.el
+(require 'cheat)
+
 (provide 'init-local)
