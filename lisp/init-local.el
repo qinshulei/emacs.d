@@ -149,4 +149,32 @@
 ;; install cheat.el
 (require 'cheat)
 
+;; install how-many-lines-in-project
+(require-package 'how-many-lines-in-project)
+(require 'how-many-lines-in-project)
+
+;; install eim
+(autoload 'eim-use-package "eim" "Another emacs input method")
+;; Tooltip 暂时还不好用
+ (setq eim-use-tooltip nil)
+
+;; ;; 五笔
+;; (register-input-method
+;;  "eim-wb" "euc-cn" 'eim-use-package
+;;   "五笔" "汉字五笔输入法" "wb.txt")
+;;
+;;   ;; 拼音
+(register-input-method
+  "eim-py" "euc-cn" 'eim-use-package
+   "拼音" "汉字拼音输入法" "py.txt")
+;;
+;;     ;; 双拼
+;;     (register-input-method
+;;      "eim-dp" "euc-cn" 'eim-use-package
+;;       "双拼" "汉字双拼输入法" "dp.txt")
+;;
+;; 用 ; 暂时输入英文
+(require 'eim-extra)
+(global-set-key ";" 'eim-insert-ascii)
+
 (provide 'init-local)
