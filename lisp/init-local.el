@@ -125,9 +125,14 @@
 ;; install bm.el
 (require-package 'bm)
 (require 'bm)
-(global-set-key (kbd "<C-f2>") 'bm-toggle)
-(global-set-key (kbd "<f2>")   'bm-next)
-(global-set-key (kbd "<S-f2>") 'bm-previous)
+(global-set-key [f5] 'bm-toggle)
+(global-set-key [C-f5] 'bm-show-all)
+(global-set-key [C-S-f5] 'bm-remove-all-current-buffer)
+(global-set-key [f6] 'bm-next)
+(global-set-key [C-f6] 'bm-previous)
+(global-set-key [C-S-f6] 'bm-bookmark-annotate)
+(setq bm-in-lifo-order t) ;;cycle bookmark in LIFO order
+;;(setq bm-cycle-all-buffers t) ;;cycle through bookmarks in all open buffers
 
 ;; install golden-ratio
 (require-package 'golden-ratio)
