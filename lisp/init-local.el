@@ -182,4 +182,24 @@
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
 
+
+;; install hightlight indentation
+(require 'highlight-indentation)
+(set-face-background 'highlight-indentation-face "#e3e3d3")
+(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+(dolist (hook '(lisp-mode-hook
+                emacs-lisp-mode-hook
+                scheme-mode-hook
+                clojure-mode-hook
+                ruby-mode-hook
+                yaml-mode
+                python-mode-hook
+                shell-mode-hook
+                php-mode-hook
+                css-mode-hook
+                nxml-mode-hook
+                perl-mode-hook
+                javascript-mode-hook))
+  (add-hook hook 'highlight-indentation-mode))
+
 (provide 'init-local)
