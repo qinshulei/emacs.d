@@ -185,8 +185,9 @@
 
 ;; install hightlight indentation
 (require 'highlight-indentation)
-(set-face-background 'highlight-indentation-face "#e3e3d3")
-(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+(set-face-background 'highlight-indentation-face "#083743")
+(set-face-background 'highlight-indentation-current-column-face "#093844")
+
 (dolist (hook '(lisp-mode-hook
                 emacs-lisp-mode-hook
                 scheme-mode-hook
