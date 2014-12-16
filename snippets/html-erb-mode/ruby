@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ruby : erb ruby code <% %>
+# key: ruby
+# binding: direct-keybinding
+# --
+<% $0 %>
