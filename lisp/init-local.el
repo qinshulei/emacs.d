@@ -1,4 +1,7 @@
-;;; install emmet
+;; debug mode
+;;(setq debug-on-error t)
+
+;; install emmet
 (require-package 'emmet-mode)
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
@@ -161,7 +164,7 @@
 ;; install eim
 (autoload 'eim-use-package "eim" "Another emacs input method")
 ;; Tooltip 暂时还不好用
- (setq eim-use-tooltip nil)
+(setq eim-use-tooltip nil)
 
 ;; ;; 五笔
 ;; (register-input-method
@@ -170,8 +173,8 @@
 ;;
 ;;   ;; 拼音
 (register-input-method
-  "eim-py" "euc-cn" 'eim-use-package
-   "拼音" "汉字拼音输入法" "py.txt")
+ "eim-py" "euc-cn" 'eim-use-package
+ "拼音" "汉字拼音输入法" "py.txt")
 ;;
 ;;     ;; 双拼
 ;;     (register-input-method
@@ -209,12 +212,40 @@
 (setq devdocs-base-index-url "http://192.168.65.56:9292/docs")
 ;; (setq devdocs-base-url "http://devdocs.io")
 ;;(setq devdocs-base-index-url "http://docs.devdocs.io")
+(setq devdocs-subjects
+      '(("Angular.js" "angular")
+        ("Backbone.js" "backbone")
+        ("CoffeeScript" "coffeescript")
+        ("C++" "cpp")
+        ("JavaScript" "javascript")
+        ("C" "c")
+        ("CSS" "css")
+        ("D3" "d3")
+        ("Ember.jg" "ember")
+        ("Git" "git")
+        ("HTTP" "http")
+        ("jQuery" "jquery")
+        ("Knockout.js" "knockout")
+        ("Less" "less")
+        ("Lo-Dash" "lodash")
+        ("Moment.js" "moment")
+        ("Node.js" "node")
+        ("PHP" "php")
+        ("PostgreSQL" "postgresql")
+        ("Python" "python")
+        ("Ruby" "ruby")
+        ("Redis" "redis")
+        ("SASS" "sass")
+        ("Underscore.js" "underscore")
+        ("YII" "yii")))
 (devdocs-setup)
-(global-set-key (kbd "C-h C-j") #'devdocs-lookup-javascript)
-(global-set-key (kbd "C-h C-a") #'devdocs-lookup-angular)
-(global-set-key (kbd "C-h C-r") #'devdocs-lookup-ruby)
-(global-set-key (kbd "C-h C-c") #'devdocs-lookup-c)
-(global-set-key (kbd "C-h C-p") #'devdocs-lookup-python)
-(global-set-key (kbd "C-h C-=") #'devdocs-lookup-cpp)
+(global-set-key (kbd "s-j j") #'devdocs-lookup-javascript)
+(global-set-key (kbd "s-j q") #'devdocs-lookup-jquery)
+(global-set-key (kbd "s-j a") #'devdocs-lookup-angular)
+(global-set-key (kbd "s-j r") #'devdocs-lookup-ruby)
+(global-set-key (kbd "s-j c") #'devdocs-lookup-c)
+(global-set-key (kbd "s-j p") #'devdocs-lookup-python)
+(global-set-key (kbd "s-j +") #'devdocs-lookup-cpp)
+
 
 (provide 'init-local)
