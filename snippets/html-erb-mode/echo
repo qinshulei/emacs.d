@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: echo : erb output <%= %>
+# key: echo
+# binding: direct-keybinding
+# --
+<%= $0 %>
