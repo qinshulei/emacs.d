@@ -203,4 +203,18 @@
                 javascript-mode-hook))
   (add-hook hook 'highlight-indentation-mode))
 
+;; install devdocs-lookup
+(require 'devdocs-lookup)
+(setq devdocs-base-url "http://192.168.65.56:9292")
+(setq devdocs-base-index-url "http://192.168.65.56:9292/docs")
+;; (setq devdocs-base-url "http://devdocs.io")
+;;(setq devdocs-base-index-url "http://docs.devdocs.io")
+(devdocs-setup)
+(global-set-key (kbd "C-h C-j") #'devdocs-lookup-javascript)
+(global-set-key (kbd "C-h C-a") #'devdocs-lookup-angular)
+(global-set-key (kbd "C-h C-r") #'devdocs-lookup-ruby)
+(global-set-key (kbd "C-h C-c") #'devdocs-lookup-c)
+(global-set-key (kbd "C-h C-p") #'devdocs-lookup-python)
+(global-set-key (kbd "C-h C-=") #'devdocs-lookup-cpp)
+
 (provide 'init-local)

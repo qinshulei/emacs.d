@@ -7,3 +7,6 @@
 [submodule "site-lisp/highlight-indentation"]
 	path = site-lisp/highlight-indentation
 	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
+[submodule "site-lisp/devdocs-lookup"]
+	path = site-lisp/devdocs-lookup
+	url = https://github.com/skeeto/devdocs-lookup.git
