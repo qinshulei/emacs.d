@@ -36,3 +36,5 @@ site-lisp/package/
 projectile-bookmarks.eld
 session*
 projectile.cache
+/.cask/
+/.sx/
