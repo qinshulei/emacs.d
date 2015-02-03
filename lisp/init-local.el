@@ -258,4 +258,12 @@
 (require 'edit-server)
 (edit-server-start)
 
+(require-package 'groovy-mode)
+(require 'groovy-mode)
+
+;; Standard Jedi.el setting
+(require-package 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
 (provide 'init-local)
