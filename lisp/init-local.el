@@ -266,4 +266,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
+;; add m-up m-down for text move
+(require-package 'move-text)
+(require 'move-text)
+(move-text-default-bindings)
+
 (provide 'init-local)
