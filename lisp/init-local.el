@@ -283,13 +283,13 @@
 (require 'hydra-examples)
 (hydra-create "s-i w" hydra-example-move-window-splitter)
 
-(defhydra hydra-zoom (global-map "s-i z")
+(defhydra hydra-zoom (global-map "s-i t")
   "text zoom"
   ("j" text-scale-increase "in")
   ("k" text-scale-decrease "out"))
 
 (global-set-key
- (kbd "s-i z")
+ (kbd "s-i v")
  (defhydra hydra-vi
      (:pre
       (set-cursor-color "#40e0d0")
