@@ -271,4 +271,36 @@
 (require 'move-text)
 (move-text-default-bindings)
 
+;; add restfulclient.el
+(require-package 'restclient)
+(require 'restclient)
+
+;; install hydra
+(require-package 'hydra)
+(require 'hydra)
+(setq hydra-is-helpful t)
+
+(require 'hydra-examples)
+(hydra-create "s-i w" hydra-example-move-window-splitter)
+
+(defhydra hydra-zoom (global-map "s-i z")
+  "text zoom"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out"))
+
+(global-set-key
+ (kbd "s-i z")
+ (defhydra hydra-vi
+     (:pre
+      (set-cursor-color "#40e0d0")
+      :post
+      (set-cursor-color "#ffffff")
+      :color amaranth)
+   "vi"
+   ("l" forward-char)
+   ("h" backward-char)
+   ("j" next-line)
+   ("k" previous-line)
+   ("q" nil "quit")))
+
 (provide 'init-local)
