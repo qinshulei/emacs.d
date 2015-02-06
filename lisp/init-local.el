@@ -275,13 +275,59 @@
 (require-package 'restclient)
 (require 'restclient)
 
+;; install ace-window
+(require-package 'ace-window)
+(require 'ace-window)
+
 ;; install hydra
 (require-package 'hydra)
 (require 'hydra)
 (setq hydra-is-helpful t)
 
-(require 'hydra-examples)
-(hydra-create "s-i w" hydra-example-move-window-splitter)
+(global-set-key
+ (kbd "s-i w")
+ (defhydra hydra-window ()
+   "window"
+   ("h" windmove-left)
+   ("j" windmove-down)
+   ("k" windmove-up)
+   ("l" windmove-right)
+   ("a" (lambda ()
+          (interactive)
+          (ace-window 1)
+          (add-hook 'ace-window-end-once-hook
+                    'hydra-window/body)
+          (throw 'hydra-disable t))
+    "ace")
+   ("v" (lambda ()
+          (interactive)
+          (split-window-right)
+          (windmove-right))
+    "vert")
+   ("x" (lambda ()
+          (interactive)
+          (split-window-below)
+          (windmove-down))
+    "horz")
+   ("s" (lambda ()
+          (interactive)
+          (ace-window 4)
+          (add-hook 'ace-window-end-once-hook
+                    'hydra-window/body)
+          (throw 'hydra-disable t))
+    "swap")
+   ("t" transpose-frame "'")
+   ("d" (lambda ()
+          (interactive)
+          (ace-window 16)
+          (add-hook 'ace-window-end-once-hook
+                    'hydra-window/body)
+          (throw 'hydra-disable t))
+    "del")
+   ("o" delete-other-windows "one" :color blue)
+   ("i" ace-maximize-window "ace-one" :color blue)
+   ("q" nil "cancel")))
+
 
 (defhydra hydra-zoom (global-map "s-i t")
   "text zoom"
@@ -292,7 +338,7 @@
  (kbd "s-i v")
  (defhydra hydra-vi
      (:pre
-      (set-cursor-color "#40e0d0")
+      (set-cursor-color "#e52b50")
       :post
       (set-cursor-color "#ffffff")
       :color amaranth)
@@ -301,6 +347,11 @@
    ("h" backward-char)
    ("j" next-line)
    ("k" previous-line)
+   ("m" set-mark-command "mark")
+   ("a" move-beginning-of-line "beg")
+   ("e" move-end-of-line "end")
+   ("d" delete-region "del" :color blue)
+   ("y" kill-ring-save "yank" :color blue)
    ("q" nil "quit")))
 
 (provide 'init-local)
