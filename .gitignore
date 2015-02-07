@@ -38,3 +38,5 @@ session*
 projectile.cache
 /.cask/
 /.sx/
+/pyim
+
