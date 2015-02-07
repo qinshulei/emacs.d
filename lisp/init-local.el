@@ -337,11 +337,11 @@
 (global-set-key
  (kbd "s-i v")
  (defhydra hydra-vi
-     (:pre
-      (set-cursor-color "#e52b50")
-      :post
-      (set-cursor-color "#ffffff")
-      :color amaranth)
+   (:pre
+    (set-cursor-color "#e52b50")
+    :post
+    (set-cursor-color "#ffffff")
+    :color amaranth)
    "vi"
    ("l" forward-char)
    ("h" backward-char)
@@ -353,5 +353,12 @@
    ("d" delete-region "del" :color blue)
    ("y" kill-ring-save "yank" :color blue)
    ("q" nil "quit")))
+
+;; install chines-py
+(require-package 'chinese-pyim)
+(require 'chinese-pyim)
+(setq pyim-dicts
+      '((:name "dict1" :file "~/configs/chinese-py/pyim-bigdict.txt" :coding utf-8-unix)))
+;;(pyim-restart-1 t)
 
 (provide 'init-local)
