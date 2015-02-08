@@ -63,6 +63,11 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+;; install ag.el
+;; require ag
+(require-package 'ag)
+(require 'ag)
+
 ;;; install projectile
 (require-package 'projectile)
 
