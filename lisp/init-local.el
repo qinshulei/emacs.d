@@ -359,5 +359,13 @@
 (require 'rubocop)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 
+;; install chines-py
+(require-package 'chinese-pyim)
+(require 'chinese-pyim)
+;; https://github.com/tumashu/chinese-pyim-bigdict/blob/master/pyim-bigdict.txt?raw=true
+(setq pyim-dicts
+      '((:name "dict1" :file "~/configs/chinese-py/pyim-bigdict.txt" :coding utf-8-unix)))
+;;(pyim-restart-1 t)
+
 
 (provide 'init-local)
