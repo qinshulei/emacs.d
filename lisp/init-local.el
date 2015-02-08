@@ -23,6 +23,15 @@
 ;;binder insert date to key c-x t
 (global-set-key (kbd "C-x t") 'insert-date)
 
+;; install flx-ido
+(require-package 'flx-ido)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 ;;;search key bing
 (defun search-keybind (regexp &optional nlines)
