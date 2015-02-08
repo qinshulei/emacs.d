@@ -354,4 +354,10 @@
    ("y" kill-ring-save "yank" :color blue)
    ("q" nil "quit")))
 
+;; install
+(require-package 'rubocop)
+(require 'rubocop)
+(add-hook 'ruby-mode-hook 'rubocop-mode)
+
+
 (provide 'init-local)
