@@ -17,8 +17,7 @@
   (interactive)
   (when (region-active-p)
     (delete-region (region-beginning) (region-end) ))
-  (insert (format-time-string "%Y-%m-%d %H:%M:%S"))
-  )
+  (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
 ;;binder insert date to key c-x t
 (global-set-key (kbd "C-x t") 'insert-date)
@@ -374,6 +373,7 @@
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 
 ;; install chines-py
+;; https://github.com/tumashu/chinese-pyim
 (require-package 'chinese-pyim)
 (require 'chinese-pyim)
 ;; https://github.com/tumashu/chinese-pyim-bigdict/blob/master/pyim-bigdict.txt?raw=true
@@ -381,5 +381,9 @@
       '((:name "dict1" :file "~/configs/chinese-py/pyim-bigdict.txt" :coding utf-8-unix)))
 ;;(pyim-restart-1 t)
 
+;; disable lock file,
+;; the lock file will change cause the directory timestamp to be modified, which causes our build system to rebuild an entire module instead of compiling and linking for one changed file.
+;; http://stackoverflow.com/questions/5738170/why-does-emacs-create-temporary-symbolic-links-for-modified-files
+(setq create-lockfiles nil)
 
 (provide 'init-local)
