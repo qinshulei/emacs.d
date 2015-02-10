@@ -386,4 +386,12 @@
 ;; http://stackoverflow.com/questions/5738170/why-does-emacs-create-temporary-symbolic-links-for-modified-files
 (setq create-lockfiles nil)
 
+;; install hackernews
+(require-package 'hackernews)
+(require 'hackernews)
+
+;; install symon
+(require-package 'symon)
+(require 'symon)
+
 (provide 'init-local)
