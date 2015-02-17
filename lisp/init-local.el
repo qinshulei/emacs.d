@@ -394,4 +394,8 @@
 (require-package 'symon)
 (require 'symon)
 
+;; install org-download
+(require-package 'org-download)
+(require 'org-download)
+
 (provide 'init-local)
