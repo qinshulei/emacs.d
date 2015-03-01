@@ -398,4 +398,21 @@
 (require-package 'org-download)
 (require 'org-download)
 
+;; install youdao-dictionary
+(require-package 'youdao-dictionary)
+(require 'youdao-dictionary)
+;; Enable Cache
+(setq url-automatic-caching t)
+;; Example Key binding
+(global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
+;; Set file path for saving search history
+(setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
+
+;; install zeal-at-point
+(require-package 'zeal-at-point)
+(require 'zeal-at-point)
+(global-set-key "\C-cd" 'zeal-at-point)
+;;(add-to-list 'zeal-at-point-mode-alist '(perl-mode . "perl"))
+;;(add-hook 'rinari-minor-mode-hook (lambda () (setq zeal-at-point-docset "rails")))
+
 (provide 'init-local)
