@@ -40,4 +40,4 @@ projectile.cache
 /.cask/
 /.sx/
 /pyim
-
+/org-clock-save.el
