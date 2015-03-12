@@ -415,4 +415,14 @@
 ;;(add-to-list 'zeal-at-point-mode-alist '(perl-mode . "perl"))
 ;;(add-hook 'rinari-minor-mode-hook (lambda () (setq zeal-at-point-docset "rails")))
 
+
+;; install helm
+(require-package 'helm)
+(require 'helm)
+(require 'helm-config)
+(require-package 'helm-ag)
+(require 'helm-ag)
+(require-package 'helm-swoop)
+(require 'helm-swoop)
+
 (provide 'init-local)
