@@ -422,7 +422,15 @@
 (require 'helm-config)
 (require-package 'helm-ag)
 (require 'helm-ag)
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-ag (projectile-project-root)))
 (require-package 'helm-swoop)
 (require 'helm-swoop)
+
+;; install helm-projectile
+(require-package 'helm-projectile)
+(require 'helm-projectile)
+
 
 (provide 'init-local)
