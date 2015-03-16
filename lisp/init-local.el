@@ -415,4 +415,33 @@
 ;;(add-to-list 'zeal-at-point-mode-alist '(perl-mode . "perl"))
 ;;(add-hook 'rinari-minor-mode-hook (lambda () (setq zeal-at-point-docset "rails")))
 
+<<<<<<< HEAD
+=======
+
+;; install helm
+(require-package 'helm)
+(require 'helm)
+(require 'helm-config)
+(require-package 'helm-ag)
+(require 'helm-ag)
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-ag (projectile-project-root)))
+(require-package 'helm-swoop)
+(require 'helm-swoop)
+
+;; install helm-projectile
+(require-package 'helm-projectile)
+(require 'helm-projectile)
+
+;; install web-mode
+(require-package 'web-mode)
+(require 'web-mode)
+
+;; install web-beautify
+(require-package 'web-beautify)
+(require 'web-beautify)
+
+
+>>>>>>> 20b42dd8982a0dcf8b6d4397232a3888e1439f25
 (provide 'init-local)
