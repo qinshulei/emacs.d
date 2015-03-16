@@ -432,5 +432,13 @@
 (require-package 'helm-projectile)
 (require 'helm-projectile)
 
+;; install web-mode
+(require-package 'web-mode)
+(require 'web-mode)
+
+;; install web-beautify
+(require-package 'web-beautify)
+(require 'web-beautify)
+
 
 (provide 'init-local)
