@@ -440,7 +440,6 @@
 (require-package 'web-beautify)
 (require 'web-beautify)
 
-
 ;; install sublimity
 (require-package 'sublimity)
 (require 'sublimity)

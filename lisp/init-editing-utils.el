@@ -349,7 +349,12 @@ With arg N, insert N newlines."
 
 
 (require-package 'guide-key)
+<<<<<<< HEAD
+
+(setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x 4" "C-x 5" "C-x r" "C-c ;" "C-c ; f" "C-c ' f" "C-x n"  "C-c p" "C-c '"))
+=======
 (setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x 4" "C-x 5" "C-x r" "C-x C-r" "C-x r" "C-c ;" "C-c ; f" "C-c ' f" "C-x n"  "C-c p" "C-c '"))
+>>>>>>> 20b42dd8982a0dcf8b6d4397232a3888e1439f25
 (guide-key-mode 1)
 (diminish 'guide-key-mode)
 
