@@ -432,6 +432,11 @@
 (require-package 'helm-projectile)
 (require 'helm-projectile)
 
+;; install helm-github-stars
+(require-package 'helm-github-stars)
+(require 'helm-github-stars)
+(setq helm-github-stars-username "qinshulei")
+
 ;; install web-mode
 (require-package 'web-mode)
 (require 'web-mode)
