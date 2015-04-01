@@ -440,6 +440,7 @@
 ;; install web-mode
 (require-package 'web-mode)
 (require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.jelly\\'" . web-mode))
 
 ;; install web-beautify
 (require-package 'web-beautify)
@@ -451,5 +452,9 @@
 ;; (require 'sublimity-scroll)
 (require 'sublimity-map)
 ;; (require 'sublimity-attractive)
+
+;; install swiper
+(require-package 'swiper)
+(require 'swiper)
 
 (provide 'init-local)
