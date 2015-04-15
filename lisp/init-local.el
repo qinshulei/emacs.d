@@ -1,15 +1,19 @@
 ;; debug mode
 ;;(setq debug-on-error t)
 
+(require-package 'gotham-theme)
+(require 'gotham-theme)
+;;(load-theme 'gotham t)
+
+;; set theme
+(dark)
+
 ;; install emmet
 (require-package 'emmet-mode)
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'html-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
-
-;;; set theme
-(dark)
 
 ;;;insert time function
 (defun insert-date ()
