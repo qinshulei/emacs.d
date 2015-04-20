@@ -22,6 +22,8 @@
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
 
+;; Set variable org-src-fontify-natively to t to enable syntax highlighting in the source code blocks
+(setq org-src-fontify-natively t)
 
 ; Refile targets include this file and any file contributing to the agenda - up to 5 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5))))
