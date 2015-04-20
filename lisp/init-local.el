@@ -461,4 +461,8 @@
 (require-package 'swiper)
 (require 'swiper)
 
+;; install git-timemachine
+(require-package 'git-timemachine)
+(require 'git-timemachine)
+
 (provide 'init-local)
