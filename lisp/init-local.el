@@ -465,4 +465,8 @@
 (require-package 'git-timemachine)
 (require 'git-timemachine)
 
+;; install stackoverflow
+(require-package 'sx)
+(require 'sx)
+
 (provide 'init-local)
