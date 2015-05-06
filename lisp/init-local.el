@@ -457,4 +457,8 @@
 (require-package 'git-timemachine)
 (require 'git-timemachine)
 
+;; install floobits
+(require-package 'floobits)
+(require 'floobits)
+
 (provide 'init-local)
