@@ -461,4 +461,8 @@
 (require-package 'floobits)
 (require 'floobits)
 
+;; install stackoverflow
+(require-package 'sx)
+(require 'sx)
+
 (provide 'init-local)
