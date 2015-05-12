@@ -441,6 +441,17 @@
 (require 'helm-github-stars)
 (setq helm-github-stars-username "qinshulei")
 
+;; helm-dash
+(require-package 'helm-dash)
+(require 'helm-dash)
+
+;; helm-dash bind
+(defun bash-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Bash")))
+
+(add-hook 'shell-script-mode-hook 'bash-doc)
+
 ;; install web-mode
 (require-package 'web-mode)
 (require 'web-mode)
@@ -468,5 +479,9 @@
 ;; install stackoverflow
 (require-package 'sx)
 (require 'sx)
+
+;; install floobits
+(require-package 'floobits)
+(require 'floobits)
 
 (provide 'init-local)
