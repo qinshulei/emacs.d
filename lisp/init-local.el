@@ -468,10 +468,6 @@
 (require-package 'git-timemachine)
 (require 'git-timemachine)
 
-;; install floobits
-(require-package 'floobits)
-(require 'floobits)
-
 ;; install stackoverflow
 (require-package 'sx)
 (require 'sx)
