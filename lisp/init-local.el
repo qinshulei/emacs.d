@@ -484,4 +484,10 @@
 (require-package 'floobits)
 (require 'floobits)
 
+;; http://ternjs.net/doc/manual.html#emacs
+;; install tern
+(add-to-list 'load-path "~/source-install/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
+;; (add-hook 'js-mode-hook (lambda () (tern-mode t)))
+
 (provide 'init-local)
