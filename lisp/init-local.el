@@ -448,6 +448,7 @@
 (require-package 'web-mode)
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jelly\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
 
 ;; install web-beautify
 (require-package 'web-beautify)
