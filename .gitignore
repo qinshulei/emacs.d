@@ -42,3 +42,7 @@ projectile.cache
 /pyim
 /org-clock-save.el
 hgs-cache
+/ditaa*.jar
+/ido.last
+/recentf
+/viper
