@@ -423,6 +423,11 @@
   (helm-ag (projectile-project-root)))
 (require-package 'helm-swoop)
 (require 'helm-swoop)
+;; Change the keybinds to whatever you like :)
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
 ;; install helm-projectile
 (require-package 'helm-projectile)
@@ -482,5 +487,9 @@
 (add-to-list 'load-path "~/source-install/tern/emacs/")
 (autoload 'tern-mode "tern.el" nil t)
 ;; (add-hook 'js-mode-hook (lambda () (tern-mode t)))
+
+
+(global-set-key (kbd "C-*") 'isearch-forward-symbol-at-point)
+
 
 (provide 'init-local)
