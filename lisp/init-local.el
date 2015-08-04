@@ -447,7 +447,12 @@
   (interactive)
   (setq-local helm-dash-docsets '("Bash")))
 
+(defun java-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Java")))
+
 (add-hook 'shell-script-mode-hook 'bash-doc)
+(add-hook 'java-mode-hook 'java-doc)
 
 ;; install web-mode
 (require-package 'web-mode)
