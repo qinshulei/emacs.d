@@ -493,8 +493,14 @@
 (autoload 'tern-mode "tern.el" nil t)
 ;; (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 
-
 (global-set-key (kbd "C-*") 'isearch-forward-symbol-at-point)
+
+;; install git-gutter  https://github.com/syohex/emacs-git-gutter
+(require-package 'git-gutter)
+(require 'git-gutter)
+(global-git-gutter-mode +1)
+;; (add-hook 'ruby-mode-hook 'git-gutter-mode)
+;; (add-hook 'python-mode-hook 'git-gutter-mode)
 
 
 (provide 'init-local)
