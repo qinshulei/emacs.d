@@ -511,4 +511,7 @@
 ;; Revert current hunk
 ;; (global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
 
+(require-package 'know-your-http-well)
+(require 'know-your-http-well)
+
 (provide 'init-local)
