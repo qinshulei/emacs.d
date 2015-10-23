@@ -465,6 +465,14 @@
 ;; install web-beautify
 (require-package 'web-beautify)
 (require 'web-beautify)
+(eval-after-load 'js2-mode
+  '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'json-mode
+  '(define-key json-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'sgml-mode
+  '(define-key html-mode-map (kbd "C-c b") 'web-beautify-html))
+(eval-after-load 'css-mode
+  '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
 
 ;; install sublimity
 (require-package 'sublimity)
@@ -515,5 +523,8 @@
 
 (require-package 'know-your-http-well)
 (require 'know-your-http-well)
+
+(require-package 'lentic)
+(require 'lentic)
 
 (provide 'init-local)
