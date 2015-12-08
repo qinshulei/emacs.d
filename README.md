@@ -22,6 +22,7 @@ config adds improved defaults and extended support for the following:
 * Python
 * PHP
 * Haskell
+* Elm
 * Erlang
 * Common Lisp (with Slime)
 
