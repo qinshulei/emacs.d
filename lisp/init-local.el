@@ -527,4 +527,9 @@
 (require-package 'lentic)
 (require 'lentic)
 
+(require-package 'magit-gerrit)
+(require 'magit-gerrit)
+(setq-default magit-gerrit-ssh-creds "qinsl0106@192.168.64.51")
+(setq-default magit-gerrit-remote "origin")
+
 (provide 'init-local)
