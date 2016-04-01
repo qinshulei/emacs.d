@@ -348,11 +348,11 @@
 (global-set-key
  (kbd "s-i v")
  (defhydra hydra-vi
-     (:pre
-      (set-cursor-color "#e52b50")
-      :post
-      (set-cursor-color "#ffffff")
-      :color amaranth)
+   (:pre
+    (set-cursor-color "#e52b50")
+    :post
+    (set-cursor-color "#ffffff")
+    :color amaranth)
    "vi"
    ("l" forward-char)
    ("h" backward-char)
@@ -531,5 +531,15 @@
 (require 'magit-gerrit)
 (setq-default magit-gerrit-ssh-creds "qinsl0106@192.168.64.51")
 (setq-default magit-gerrit-remote "origin")
+
+(require-package 'dired-k)
+(require 'dired-k)
+(define-key dired-mode-map (kbd "K") 'dired-k)
+;; You can use dired-k alternative to revert-buffer
+(define-key dired-mode-map (kbd "g") 'dired-k)
+;; always execute dired-k when dired buffer is opened
+;(add-hook 'dired-initial-position-hook 'dired-k)
+;(add-hook 'dired-after-readin-hook #'dired-k-no-revert)
+
 
 (provide 'init-local)
