@@ -538,8 +538,12 @@
 ;; You can use dired-k alternative to revert-buffer
 (define-key dired-mode-map (kbd "g") 'dired-k)
 ;; always execute dired-k when dired buffer is opened
-;(add-hook 'dired-initial-position-hook 'dired-k)
-;(add-hook 'dired-after-readin-hook #'dired-k-no-revert)
+;; (add-hook 'dired-initial-position-hook 'dired-k)
+;; (add-hook 'dired-after-readin-hook #'dired-k-no-revert)
 
+;; https://wakatime.com/help/plugins/emacs#melpa-install
+(require-package 'wakatime-mode)
+(require 'wakatime-mode)
+(global-wakatime-mode)
 
 (provide 'init-local)
