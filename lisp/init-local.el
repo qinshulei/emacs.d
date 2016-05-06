@@ -57,11 +57,6 @@
 (require 'js2-refactor)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
-;;; install neotree
-(require-package 'neotree)
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
 ;;; install projectile
 (require-package 'projectile)
 (projectile-global-mode)
@@ -72,11 +67,6 @@
 (require 'js2-refactor)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
-;;; install neotree
-(require-package 'neotree)
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
 ;; install ag.el
 ;; require ag
 (require-package 'ag)
@@ -84,14 +74,6 @@
 
 ;;; install projectile
 (require-package 'projectile)
-
-;;; install google translate
-(require-package 'google-translate)
-(require 'google-translate-default-ui)
-(require 'google-translate-smooth-ui)
-(global-set-key "\C-ct" 'google-translate-smooth-translate)
-(setq google-translate-translation-directions-alist '(("en" . "zh-CN")))
-
 
 ;;; remove makefile tab
 (add-hook 'makefile-mode-hook
@@ -122,14 +104,6 @@
             (whitespace-cleanup-mode 0)
             (setq tab-width 8)))
 
-;; install nyan-mode
-(require-package 'nyan-mode)
-
-;; install nyan-prompt
-(require-package 'nyan-prompt)
-(add-hook 'eshell-load-hook 'nyan-prompt-enable)
-(require 'nyan-mode)
-
 ;; install angular snipptes
 (require-package 'angular-snippets)
 (require 'angular-snippets)
@@ -148,22 +122,10 @@
 (setq bm-in-lifo-order t) ;;cycle bookmark in LIFO order
 ;;(setq bm-cycle-all-buffers t) ;;cycle through bookmarks in all open buffers
 
-;; install golden-ratio
-(require-package 'golden-ratio)
-(require 'golden-ratio)
-;;(golden-ratio-mode 1)
-
-;; don't generate backup file
-;;(setq make-backup-files nil)
-
 ;; all backups goto ~/.backups instead in the current directory
 (setq backup-directory-alist (quote (("." . "~/.saves"))))
 (setq backup-by-copying t)
-
-;; install e2wm e2wm
-;;(require-package 'e2wm)
-;;(require 'e2wm)
-;;(global-set-key (kbd "M-+") 'e2wm:start-management)
+(setq create-lockfiles nil)
 
 ;; install cheat.el
 (require 'cheat)
@@ -171,31 +133,6 @@
 ;; install how-many-lines-in-project
 (require-package 'how-many-lines-in-project)
 (require 'how-many-lines-in-project)
-
-;; install eim
-(autoload 'eim-use-package "eim" "Another emacs input method")
-;; Tooltip 暂时还不好用
-(setq eim-use-tooltip nil)
-
-;; ;; 五笔
-;; (register-input-method
-;;  "eim-wb" "euc-cn" 'eim-use-package
-;;   "五笔" "汉字五笔输入法" "wb.txt")
-;;
-;;   ;; 拼音
-(register-input-method
- "eim-py" "euc-cn" 'eim-use-package
- "拼音" "汉字拼音输入法" "py.txt")
-;;
-;;     ;; 双拼
-;;     (register-input-method
-;;      "eim-dp" "euc-cn" 'eim-use-package
-;;       "双拼" "汉字双拼输入法" "dp.txt")
-;;
-;; 用 ; 暂时输入英文
-(require 'eim-extra)
-(global-set-key ";" 'eim-insert-ascii)
-
 
 ;; install hightlight indentation
 (require 'highlight-indentation)
@@ -216,55 +153,6 @@
                 perl-mode-hook
                 javascript-mode-hook))
   (add-hook hook 'highlight-indentation-mode))
-
-;; install devdocs-lookup
-(require 'devdocs-lookup)
-(setq devdocs-base-url "http://192.168.65.56:9292")
-(setq devdocs-base-index-url "http://192.168.65.56:9292/docs")
-;; (setq devdocs-base-url "http://devdocs.io")
-;;(setq devdocs-base-index-url "http://docs.devdocs.io")
-(setq devdocs-subjects
-      '(("Angular.js" "angular")
-        ("JavaScript" "javascript")
-        ("CSS" "css")
-        ("HTML" "html")
-        ("DOM" "dom")
-        ("Backbone.js" "backbone")
-        ("Node.js" "node")
-        ("Python" "python")
-        ("Ruby" "ruby")
-        ("rails" "rails")
-        ("CoffeeScript" "coffeescript")
-        ("C++" "cpp")
-        ("C" "c")
-        ("D3" "d3")
-        ("Ember.jg" "ember")
-        ("Git" "git")
-        ("HTTP" "http")
-        ("jQuery" "jquery")
-        ("Knockout.js" "knockout")
-        ("Less" "less")
-        ("Lo-Dash" "lodash")
-        ("Moment.js" "moment")
-        ("PHP" "php")
-        ("PostgreSQL" "postgresql")
-        ("Redis" "redis")
-        ("SASS" "sass")
-        ("Underscore.js" "underscore")
-        ("YII" "yii")))
-(devdocs-setup)
-(global-set-key (kbd "s-d j") #'devdocs-lookup-javascript)
-(global-set-key (kbd "s-d q") #'devdocs-lookup-jquery)
-(global-set-key (kbd "s-d a") #'devdocs-lookup-angular)
-(global-set-key (kbd "s-d c") #'devdocs-lookup-css)
-(global-set-key (kbd "s-d h") #'devdocs-lookup-html)
-(global-set-key (kbd "s-d d") #'devdocs-lookup-dom)
-(global-set-key (kbd "s-d n") #'devdocs-lookup-node)
-(global-set-key (kbd "s-d r") #'devdocs-lookup-ruby)
-(global-set-key (kbd "s-d R") #'devdocs-lookup-rails)
-(global-set-key (kbd "s-d p") #'devdocs-lookup-python)
-(global-set-key (kbd "s-d +") #'devdocs-lookup-cpp)
-
 
 (require 'edit-server)
 (edit-server-start)
@@ -402,17 +290,9 @@
 ;; Enable Cache
 (setq url-automatic-caching t)
 ;; Example Key binding
-(global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
+(global-set-key (kbd "C-c t") 'youdao-dictionary-search-at-point)
 ;; Set file path for saving search history
 (setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
-
-;; install zeal-at-point
-(require-package 'zeal-at-point)
-(require 'zeal-at-point)
-(global-set-key "\C-cd" 'zeal-at-point)
-;;(add-to-list 'zeal-at-point-mode-alist '(perl-mode . "perl"))
-;;(add-hook 'rinari-minor-mode-hook (lambda () (setq zeal-at-point-docset "rails")))
-
 
 ;; install helm
 (require-package 'helm)
@@ -523,14 +403,6 @@
 
 (require-package 'know-your-http-well)
 (require 'know-your-http-well)
-
-(require-package 'lentic)
-(require 'lentic)
-
-(require-package 'magit-gerrit)
-(require 'magit-gerrit)
-(setq-default magit-gerrit-ssh-creds "qinsl0106@192.168.64.51")
-(setq-default magit-gerrit-remote "origin")
 
 (require-package 'dired-k)
 (require 'dired-k)

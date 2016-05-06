@@ -14,19 +14,20 @@
 
 ;;; Standard package repositories
 
-(when (< emacs-major-version 24)
-  ;; Mainly for ruby-mode
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")))
+;;(when (< emacs-major-version 24) (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")))
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+;;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("org" . "https://git.oschina.net/EmacsChina/elpa/raw/master/org/"))
 
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+
+;;(when (< emacs-major-version 24) (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(when (< emacs-major-version 24) (add-to-list 'package-archives '("gnu" . "https://git.oschina.net/EmacsChina/elpa/raw/master/gnu/")))
 
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://git.oschina.net/EmacsChina/elpa/raw/master/melpa/") t)
 
 
 ;; If gpg cannot be found, signature checking will fail, so we
