@@ -50,7 +50,6 @@
 ;;;install yasnippt
 (require-package 'yasnippet)
 (require 'yasnippet)
-(yas-global-mode 1)
 
 ;;; install js2-refactor
 (require-package 'js2-refactor)
@@ -341,6 +340,7 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jelly\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.gsp\\'" . web-mode))
 
 ;; install web-beautify
 (require-package 'web-beautify)
@@ -392,14 +392,14 @@
 ;; (add-hook 'ruby-mode-hook 'git-gutter-mode)
 ;; (add-hook 'python-mode-hook 'git-gutter-mode)
 ;; (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
-;; (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
 ;; Jump to next/previous hunk
 (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
 (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
 ;; Stage current hunk
-;; (global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
+(global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
 ;; Revert current hunk
-;; (global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
 
 (require-package 'know-your-http-well)
 (require 'know-your-http-well)
@@ -417,5 +417,10 @@
 (require-package 'wakatime-mode)
 (require 'wakatime-mode)
 (global-wakatime-mode)
+
+;; change indent
+(setq tab-width 4)
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
 
 (provide 'init-local)
