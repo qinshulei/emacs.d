@@ -158,6 +158,10 @@
 
 (require-package 'groovy-mode)
 (require 'groovy-mode)
+(add-hook 'groovy-mode-hook
+          (lambda ()
+            (c-set-style "java")))
+
 
 ;; Standard Jedi.el setting
 (require-package 'jedi)
