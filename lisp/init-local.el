@@ -50,6 +50,12 @@
 ;;;install yasnippt
 (require-package 'yasnippet)
 (require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"
+        "~/.emacs.d/elpa/yasnippet-20160504.935/snippets"
+        ))
+(yas-global-mode 1)
+
 
 ;;; install js2-refactor
 (require-package 'js2-refactor)
