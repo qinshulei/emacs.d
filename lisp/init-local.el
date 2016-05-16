@@ -167,6 +167,9 @@
 (add-hook 'groovy-mode-hook
           (lambda ()
             (c-set-style "java")))
+(add-hook 'java-mode-hook
+          (lambda ()
+            (c-set-style "java")))
 
 
 ;; Standard Jedi.el setting
@@ -332,18 +335,45 @@
 ;; helm-dash
 (require-package 'helm-dash)
 (require 'helm-dash)
+(setq helm-dash-browser-func 'eww)
+(setq helm-dash-min-length 3)
 
 ;; helm-dash bind
 (defun bash-doc ()
   (interactive)
   (setq-local helm-dash-docsets '("Bash")))
-
 (defun java-doc ()
   (interactive)
-  (setq-local helm-dash-docsets '("Java")))
+  (setq-local helm-dash-docsets '("Java EE6")))
+(defun python-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Python 2")))
+(defun groovy-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Groovy")))
+(defun css-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("CSS")))
+(defun javascript-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("JavaScript")))
+(defun grails-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Grails")))
+(defun html-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("HTML")))
 
 (add-hook 'shell-script-mode-hook 'bash-doc)
 (add-hook 'java-mode-hook 'java-doc)
+(add-hook 'python-mode-hook 'python-doc)
+(add-hook 'groovy-mode-hook 'groovy-doc)
+(add-hook 'css-mode-hook 'css-doc)
+(add-hook 'js2-mode-hook 'javascript-doc)
+(add-hook 'web-mode-hook 'html-doc)
+
+(global-set-key (kbd "C-'") #'helm-dash-at-point)
+(global-set-key (kbd "C-\"") #'helm-dash)
 
 ;; install web-mode
 (require-package 'web-mode)
