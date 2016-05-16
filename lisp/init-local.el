@@ -344,7 +344,7 @@
   (setq-local helm-dash-docsets '("Bash")))
 (defun java-doc ()
   (interactive)
-  (setq-local helm-dash-docsets '("Java EE6")))
+  (setq-local helm-dash-docsets '("Java")))
 (defun python-doc ()
   (interactive)
   (setq-local helm-dash-docsets '("Python 2")))
