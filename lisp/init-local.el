@@ -458,9 +458,33 @@
 (require 'wakatime-mode)
 (global-wakatime-mode)
 
-;; change indent
-(setq tab-width 4)
-(defvaralias 'c-basic-offset 'tab-width)
-(defvaralias 'cperl-indent-level 'tab-width)
+;; open init local file
+(defun open-init-local-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-local.el"))
+(global-set-key (kbd "<f2>") 'open-init-local-file)
+
+;; hightlight current line
+(global-hl-line-mode 1)
+
+;; set default agenda files
+(setq org-agenda-files '("~/org"))
+
+
+;; indent all
+(defun indent-buffer()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun indent-region-or-buffer()
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+        (progn
+          (indent-region (region-beginning) (region-end))
+          (message "Indent selected region."))
+      (progn
+        (indent-buffer)
+        (message "Indent buffer.")))))
 
 (provide 'init-local)
