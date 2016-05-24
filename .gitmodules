@@ -1,12 +1,6 @@
 [submodule "site-lisp/cheat"]
 	path = site-lisp/cheat
 	url = https://github.com/qinshulei/cheat.el.git
-[submodule "site-lisp/eim"]
-	path = site-lisp/eim
-	url = https://github.com/RenWenshan/emacs-eim.git
 [submodule "site-lisp/highlight-indentation"]
 	path = site-lisp/highlight-indentation
 	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
-[submodule "site-lisp/devdocs-lookup"]
-	path = site-lisp/devdocs-lookup
-	url = https://github.com/skeeto/devdocs-lookup.git
