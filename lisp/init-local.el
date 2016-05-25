@@ -487,4 +487,8 @@
         (indent-buffer)
         (message "Indent buffer.")))))
 
+;; Tool for capturing screencasts directly from Emacs.
+(require-package 'camcorder)
+(require 'camcorder)
+
 (provide 'init-local)
