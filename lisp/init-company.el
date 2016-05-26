@@ -58,4 +58,7 @@
    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
+;; company tags in all mode
+(setq company-etags-everywhere '(php-mode html-mode web-mode nxml-mode groovy-mode java-mode))
+
 (provide 'init-company)

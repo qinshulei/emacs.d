@@ -66,6 +66,9 @@
 (require-package 'projectile)
 (projectile-global-mode)
 (setq projectile-indexing-method 'alien)
+(setq projectile-tags-command
+      (concat projectile-tags-command
+              " --exclude=\"*.min.*\" --exclude=.git --exclude=tmp --exclude=log "))
 
 ;;; install js2-refactor
 (require-package 'js2-refactor)
