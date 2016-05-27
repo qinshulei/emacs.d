@@ -208,8 +208,6 @@
 
 (define-abbrev-table 'pyim-dicts-manager-mode-abbrev-table '())
 
-(define-abbrev-table 'restclient-mode-abbrev-table '())
-
 (define-abbrev-table 'ruby-compilation-mode-abbrev-table '())
 
 (define-abbrev-table 'ruby-mode-abbrev-table '())

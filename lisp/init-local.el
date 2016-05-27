@@ -1,12 +1,7 @@
 ;; debug mode
-;;(setq debug-on-error t)
+(setq debug-on-error t)
 
-(require-package 'gotham-theme)
-(require 'gotham-theme)
-;;(load-theme 'gotham t)
-
-;; set theme
-(dark)
+(setq ad-redefinition-action 'accept)
 
 ;; install emmet
 (require-package 'emmet-mode)
@@ -186,8 +181,8 @@
 (move-text-default-bindings)
 
 ;; add restfulclient.el
-(require-package 'restclient)
-(require 'restclient)
+;; (require-package 'restclient)
+;; (require 'restclient)
 
 ;; install ace-window
 (require-package 'ace-window)
